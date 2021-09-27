@@ -1,0 +1,78 @@
+//Imports de librerías de C++
+#include <cstdlib>
+#include <iostream>
+//Espacio de nombres para utilizar el cout<< y cin>>
+using namespace std;
+//Clase hora
+class hora {
+ private:
+ int Horas;
+ int minutos;
+ int segundos;
+ //Datos Privados de la clase
+ public:
+ //Constructores
+  hora() {
+  }
+   horafija(int x=3,int y=30, int z=21) { 
+      Horas = x;
+      minutos = y;
+      segundos = z;
+      return 0;
+    }
+    hora(int x, int y, int z) { 
+      Horas = x;
+      minutos = y;
+      segundos = z;
+    }
+
+ //Métodos de la clase
+ //setters
+ void setHoras(int horas) { this->Horas = horas; }
+ void setminutos(int minutos) { this->minutos = minutos; }
+ void setsegundos(int segundos) { this->segundos = segundos; }
+
+ //getters
+ int getHoras() { return this->Horas; }
+ int getminutos() { return this->minutos; }
+ int getsegundos() { return this->segundos; }
+
+// métodos varios
+ hora sumar(hora h1, hora h2 ){
+   hora h3();
+   // me da error al compilar aquí ya que me dice que no se puede sumar por ser de diferentes tipos de datos pero no lo entiendo porque todo son int
+   //horas
+   int hx = (h1.getHoras);
+   int hy = (h2.getHoras);
+   int h = (hx + hy);
+   //minutos
+   int minx = (h1.getminutos);
+   int miny = (h2.getminutos);
+   int min = (minx + miny);
+   //segundos
+   int segx = (h1.getsegundos);
+   int segy = (h2.getsegundos);
+   int seg = (segx + segy);
+ h3.setHoras(h);
+ h3.setminutos(min);
+ h3.setsegundos(seg);
+ return h3;
+};
+void visualizar(hora h1){
+    cout << h1.getHoras + ":" + h1.getminutos + ":" + h1.getsegundos;
+ //Implementacion
+}
+int main(int argc, char *argv[])
+{
+ //Principal
+ hora h0 ();
+ visualizar (h0);
+ hora h1(2,20,27);
+ visualizar (h1);
+ hora h2 (1,15,30);
+ hora h3 = sumar(h1, h2);
+ visualizar (h3);
+
+return 0;
+}};
+
