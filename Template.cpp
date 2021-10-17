@@ -1,20 +1,24 @@
 #include <iostream>
 using namespace std;
 template <class a>
-a solicitardatos(){
-    cout << "Por favor introduzca su dato";
-    a dato_1 ;
-    cin >> dato_1;
-    return dato_1;
-    }
-template <class a>
+class valores {
+    private:
+    a v1;
+    a v2;
+    a v3;
+    public:
+    valores(a v1, a v2, a v3);
+}
 void imprimirdatos(){
-    a dato_1 = solicitardatos();
-    a dato_2 = solicitardatos();
-    a dato_3 = solicitardatos();
+    valores() = new valores(int dato_1 ,int dato_2,int dato_3);
+    cout << "Por favor introduzca su dato";
+    cin >> dato_1;
+    cout << "Por favor introduzca su dato";
+    cin >> dato_2;
+    cout << "Por favor introduzca su dato";
+    cin >> dato_3;
     cout << dato_1 + ", " + dato_2 + ", " + dato_3;
 }
-template <class a>
 int main(){
     imprimirdatos();
     return 0;
