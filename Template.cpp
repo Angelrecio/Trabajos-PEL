@@ -8,7 +8,7 @@ class valores {
     a v3;
     public:
     valores(a v1, a v2, a v3);
-}
+};
 void imprimirdatos(){
     valores() = new valores(int dato_1 ,int dato_2,int dato_3);
     cout << "Por favor introduzca su dato";
