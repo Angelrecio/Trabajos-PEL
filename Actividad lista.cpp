@@ -37,7 +37,7 @@ int main(){
     list<Cliente> cola;
     Caja caja1;
     Cliente persona;
-    cout<< "introduce el numero de lo que está en la cola del súper";
+    cout<< "introduce el numero de clientes que están en la cola del súper";
     cin >>  num_de_gente;
     for (int i = 0; i < num_de_gente; i++){
         string nombre;
@@ -46,11 +46,14 @@ int main(){
         persona.setnombre(nombre);
         cola.push_back(persona);
     }
+    list<int> it;
+    it = cola.begin();
+    advance(it,cola.size()%2);
     caja1.setcola(cola);
     Caja caja2;
-    caja2.setcola(caja1.getcola().splice(num_de_gente%2));
-    list<Cliente> cola2 = caja2.getcola();
-    for (int i= 0; i<cola2.size(); i++) 
-
+    list<Cliente> cola2;
+    cola2 = caja2.getcola();
+    cola2.splice(cola2.end(),cola, it, cola.end());
+    list<Cliente> cola2 = caja2.getcola(); 
 return 0;
 }
