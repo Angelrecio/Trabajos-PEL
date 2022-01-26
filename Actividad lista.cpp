@@ -46,14 +46,14 @@ int main(){
         persona.setnombre(nombre);
         cola.push_back(persona);
     }
-    list<int> it;
+    list<Cliente>:: iterator it;
     it = cola.begin();
     advance(it,cola.size()%2);
     caja1.setcola(cola);
     Caja caja2;
     list<Cliente> cola2;
     cola2 = caja2.getcola();
-    cola2.splice(cola2.end(),cola, it, cola.end());
+    cola2.splice(cola2.end(), cola, it , cola.end());
     list<Cliente> cola2 = caja2.getcola(); 
 return 0;
 }

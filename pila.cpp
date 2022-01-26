@@ -4,6 +4,7 @@
 #include<stack>
 #include<vector>
 using namespace std;
+// cola es lo mismo para declarar, solo que se llama queue
 
 int main(){
     vector<int> lista_nums;
@@ -28,7 +29,15 @@ int main(){
         posicion = i;
     }
     pila.push(menor);
-    lista_nums.erase(posicion);
+    lista_nums.erase(lista_nums.begin() + posicion);
     }
+    }
+    lista_nums.empty();
+    int variable_num;
+    for (int k = 0; k< pila.size();k++){
+        variable_num = pila.top();
+        pila.pop();
+        lista_nums.push_back(variable_num);
+        cout << lista_nums[k] << ", ";
     }
 }
